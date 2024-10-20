@@ -68,6 +68,21 @@ section {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
 }
 
+.service-card p {
+    margin-top: 10px; /* Space above the paragraph */
+}
+
+.service-card a {
+    color: #007bff; /* Link color matching your primary theme */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.service-card a:hover {
+    color: #0056b3; /* Darker shade on hover */
+}
+
+
 footer {
     text-align: center;
     padding: 10px;
