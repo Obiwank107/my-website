@@ -1,114 +1,31 @@
-body {
-    font-family: 'Helvetica Neue', Arial, sans-serif; /* Modern font */
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4; /* Light background */
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>My Service Website</title>
+   <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <header>
+      <img src="https://github.com/Obiwank107/my-website/blob/main/logo.png?raw=true" alt="Obiwank107 Logo" class="logo"> <!-- Logo with descriptive alt text -->
+      <h1>Welcome to My Story IP Service Website</h1>
+      <p class="tagline">Your reliable gateway to blockchain services.</p> <!-- Hero tagline -->
+      <nav>
+         <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+         </ul>
+      </nav>
+   </header>
 
-header {
-    background-color: #007bff; /* Primary color */
-    color: white;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for header */
-}
-
-.tagline {
-    font-size: 1.1em;
-    margin: 10px 0;
-    font-style: italic; /* Italicize tagline for emphasis */
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0; /* Space above the navigation */
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s; /* Smooth transition for hover effect */
-}
-
-nav a:hover {
-    color: #ffd700; /* Gold color on hover */
-}
-
-main {
-    max-width: 1200px; /* Limit the width of the main content */
-    margin: 0 auto; /* Center the main content */
-    padding: 20px; /* Add padding around the main content */
-}
-
-section {
-    padding: 20px;
-    margin: 20px 0; /* Increased margin for better separation */
-    background: white;
-    border-radius: 10px; /* More pronounced rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow */
-}
-
-.service-card {
-    margin-bottom: 20px;
-    padding: 15px;
-    border: 1px solid #ddd; /* Border around service cards */
-    border-radius: 5px; /* Slightly rounded corners */
-    transition: transform 0.3s; /* Animation on hover */
-}
-
-.service-card:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
-}
-
-.service-card p {
-    margin-top: 10px; /* Space above the paragraph */
-}
-
-.service-card a {
-    color: #007bff; /* Link color matching your primary theme */
-    text-decoration: none; /* Remove underline */
-    transition: color 0.3s; /* Smooth transition for hover effect */
-}
-
-.service-card a:hover {
-    color: #0056b3; /* Darker shade on hover */
-}
-
-/* Button Style (if needed) */
-.button {
-    background-color: #007bff; /* Primary color for buttons */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer on hover */
-    transition: background-color 0.3s; /* Transition effect */
-}
-
-.button:hover {
-    background-color: #0056b3; /* Darker shade on hover */
-}
-
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Shadow above footer */
-}
-
-@media (max-width: 600px) {
-    nav ul li {
-        display: block; /* Stack items on smaller screens */
-        margin: 
+   <main> <!-- Added main element for semantic structure -->
+      <section id="services">
+         <h2>Services</h2>
+         <div class="service-card">
+            <h3>Story Testnet Cosmos RPC</h3>
+            <p>URL: <a href="https://rpc-story.obiwank107.xyz:26657" target="_blank" rel="noopener noreferrer">https://rpc-story.obiwank107.xyz:26657</a></p>
+         </div>
+         <div class="service-card">
+            <h3>Story Testnet EVM RPC</h3>
+            <p>URL: <a href="https://rpc-story
