@@ -24,8 +24,12 @@
       <p>URL: <a href="https://rpc-story.obiwank107.xyz:8545" target="_blank" rel="noopener noreferrer">https://rpc-story.obiwank107.xyz:8545</a></p>
    </div>
    <div class="service-card">
-      <h3>Story Testnet Peer</h3>
-      <p>URL: <a href="http://213.136.72.187:26656" target="_blank" rel="noopener noreferrer">800bd9a3bb37a07d5c57c42a5de72d7ab370cfd1@213.136.72.187:26656</a></p>
+      <h3>My Peer</h3>
+      <p>Peer: <a href="http://213.136.72.187:26656" target="_blank" rel="noopener noreferrer">800bd9a3bb37a07d5c57c42a5de72d7ab370cfd1@213.136.72.187:26656</a></p>
+   </div>
+   <div class="service-card">
+      <h3>Story Testnet Live Peer</h3>
+      <p>Live Peer: <a href="curl -s -X POST https://rpc-story.obiwank107.xyz -H "Content-Type: application/json" -d '{"jsonrpc":"2.0","method":"net_info","params":[],"id":1}' | jq -r '.result.peers[] | select(.connection_status.SendMonitor.Active == true) | "\(.node_info.id)@\(if .node_info.listen_addr | contains("0.0.0.0") then .remote_ip + ":" + (.node_info.listen_addr | sub("tcp://0.0.0.0:"; "")) else .node_info.listen_addr | sub("tcp://"; "") end)"' | tr '\n' ',' | sed 's/,$//' | awk '{print "\"" $0 "\""}'" target="_blank" rel="noopener noreferrer">800bd9a3bb37a07d5c57c42a5de72d7ab370cfd1@213.136.72.187:26656</a></p>
    </div>
 </section>
 
