@@ -9,27 +9,27 @@
 <body>
    <header>
       <img src="https://github.com/Obiwank107/my-website/blob/main/logo.png?raw=true" alt="Website Logo" class="logo"> <!-- Placeholder for logo -->
-      <h1>Welcome to My Story IP Service Website</h1>
+      <h1>Welcome to Zero Gravity (0G) Service Website</h1>
       <p class="tagline">Your reliable gateway to blockchain services.</p> <!-- Hero tagline -->
    </header>
 
 <section id="services">
    <h2>Services</h2>
    <div class="service-card">
-      <h3>Story Testnet Cosmos RPC</h3>
-      <p>URL: <a>https://rpc-story.obiwank107.xyz</a></p>
+      <h3>0G Testnet Cosmos RPC</h3>
+      <p>URL: <a>https://rpc-0g.obiwank107.xyz</a></p>
    </div>
    <div class="service-card">
-      <h3>Story Testnet EVM RPC</h3>
-      <p>URL: <a>https://evm-rpc-story.obiwank107.xyz</a></p>
+      <h3>0G Testnet EVM RPC</h3>
+      <p>URL: <a>https://evm-rpc-0g.obiwank107.xyz</a></p>
    </div>
    <div class="service-card">
       <h3>My Peer</h3>
-      <p>Peer: <a>800bd9a3bb37a07d5c57c42a5de72d7ab370cfd1@213.136.72.187:26656</a></p>
+      <p>Peer: <a>9823910452482c6cdb03edf5a289736e4eda82d1@213.136.72.187:40656</a></p>
    </div>
    <div class="service-card">
-      <h3>Story Live Peer</h3>
-      <p>Live Peer: <a>curl -s -X POST https://rpc-story.obiwank107.xyz -H "Content-Type: application/json" -d '{"jsonrpc":"2.0","method":"net_info","params":[],"id":1}' | jq -r '.result.peers[] | select(.connection_status.SendMonitor.Active == true) | "\(.node_info.id)@\(if .node_info.listen_addr | contains("0.0.0.0") then .remote_ip + ":" + (.node_info.listen_addr | sub("tcp://0.0.0.0:"; "")) else .node_info.listen_addr | sub("tcp://"; "") end)"' | tr '\n' ',' | sed 's/,$//' | awk '{print "\"" $0 "\""}'</a></p>
+      <h3>0G Live Peer</h3>
+      <p>Live Peer: <a>curl -s -X POST https://rpc-0g.obiwank107.xyz -H "Content-Type: application/json" -d '{"jsonrpc":"2.0","method":"net_info","params":[],"id":1}' | jq -r '.result.peers[] | select(.connection_status.SendMonitor.Active == true) | "\(.node_info.id)@\(if .node_info.listen_addr | contains("0.0.0.0") then .remote_ip + ":" + (.node_info.listen_addr | sub("tcp://0.0.0.0:"; "")) else .node_info.listen_addr | sub("tcp://"; "") end)"' | tr '\n' ',' | sed 's/,$//' | awk '{print "\"" $0 "\""}'</a></p>
    </div>
 </section>
 
