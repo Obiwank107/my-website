@@ -33,9 +33,10 @@ header {
 }
 
 .logo {
-   width: 120px;
-   height: 120px;
-   border-radius: 50%;
+   width: 400px;
+   max-width: 90%;
+   height: auto;
+   border-radius: 15px;
    margin-bottom: 1.5rem;
    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
    transition: transform 0.3s ease;
@@ -43,7 +44,7 @@ header {
 }
 
 .logo:hover {
-   transform: scale(1.1) rotate(5deg);
+   transform: scale(1.05);
 }
 
 h1 {
@@ -223,15 +224,26 @@ footer p {
 
    .service-card h3 {
       font-size: 1.2rem;
+      padding-right: 80px;
    }
 
    #contact {
       padding: 2rem;
    }
+
+   .copy-btn {
+      top: 1rem;
+      right: 1rem;
+      padding: 0.4rem 0.8rem;
+      font-size: 0.8rem;
+   }
 }
 
 /* Copy button styling */
 .copy-btn {
+   position: absolute;
+   top: 1.5rem;
+   right: 1.5rem;
    background: #667eea;
    color: white;
    border: none;
@@ -239,8 +251,8 @@ footer p {
    border-radius: 5px;
    cursor: pointer;
    font-size: 0.9rem;
-   margin-top: 0.5rem;
    transition: all 0.3s ease;
+   z-index: 10;
 }
 
 .copy-btn:hover {
