@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Zero Gravity (0G) Services</title>
+   <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <header>
+      <img src="https://github.com/Obiwank107/my-website/blob/main/logo.png?raw=true" alt="Website Logo" class="logo">
+      <h1>Welcome to Zero Gravity (0G)</h1>
+      <p class="tagline">Your reliable gateway to blockchain services</p>
+   </header>
+
+   <section id="services">
+      <h2>Our Services</h2>
+      
+      <div class="service-card">
+         <h3>0G Aristotle Mainnet Cosmos RPC</h3>
+         <button class="copy-btn" onclick="copyToClipboard('https://rpc-0g.obiwank107.xyz', this)">📋 Copy</button>
+         <p>URL: <a href="https://rpc-0g.obiwank107.xyz" target="_blank" rel="noopener noreferrer">https://rpc-0g.obiwank107.xyz</a></p>
+      </div>
+
+      <div class="service-card">
+         <h3>0G Aristotle Mainnet EVM RPC</h3>
+         <button class="copy-btn" onclick="copyToClipboard('https://evm-rpc-0g.obiwank107.xyz', this)">📋 Copy</button>
+         <p>URL: <a href="https://evm-rpc-0g.obiwank107.xyz" target="_blank" rel="noopener noreferrer">https://evm-rpc-0g.obiwank107.xyz</a></p>
+      </div>
+
+      <div class="service-card">
+         <h3>My Peer</h3>
+         <button class="copy-btn" onclick="copyToClipboard('eec1133bdbd3e9b49e7828772455cb515cf4b902@95.217.194.118:45656', this)">📋 Copy</button>
+         <p>Peer: <a>eec1133bdbd3e9b49e7828772455cb515cf4b902@95.217.194.118:45656</a></p>
+      </div>
+
+      <div class="service-card">
+         <h3>0G Aristotle Live Peer</h3>
+         <button class="copy-btn" onclick="copyToClipboard('curl -s -X POST https://rpc-0g.obiwank107.xyz -H \"Content-Type: application/json\" -d \'{\"jsonrpc\":\"2.0\",\"method\":\"net_info\",\"params\":[],\"id\":1}\' | jq -r \'.result.peers[] | select(.connection_status.SendMonitor.Active == true) | \"\\(.node_info.id)@\\(if .node_info.listen_addr | contains(\"0.0.0.0\") then .remote_ip + \":\" + (.node_info.listen_addr | sub(\"tcp://0.0.0.0:\"; \"\")) else .node_info.listen_addr | sub(\"tcp://\"; \"\") end)\"\' | tr \'\\n\' \',\' | sed \'s/,$//\' | awk \'{print \"\\\"\" $0 \"\\\"\"}\'', this)">📋 Copy</button>
+         <p style="font-size: 0.85rem;">curl -s -X POST https://rpc-0g.obiwank107.xyz -H "Content-Type: application/json" -d '{"jsonrpc":"2.0","method":"net_info","params":[],"id":1}' | jq -r '.result.peers[] | select(.connection_status.SendMonitor.Active == true) | "\(.node_info.id)@\(if .node_info.listen_addr | contains("0.0.0.0") then .remote_ip + ":" + (.node_info.listen_addr | sub("tcp://0.0.0.0:"; "")) else .node_info.listen_addr | sub("tcp://"; "") end)"' | tr '\n' ',' | sed 's/,$//' | awk '{print "\"" $0 "\""}'</p>
+      </div>
+   </section>
+
+   <section id="contact">
+      <h2>Contact Me</h2>
+      <p>🐦 Twitter: <a href="https://x.com/obiwank107" target="_blank" rel="noopener noreferrer">@obiwank107</a></p>
+      <p>📧 Email: <a href="mailto:pok.9.deng@gmail.com">pok.9.deng@gmail.com</a></p>
+   </section>
+
+   <footer>
+      <p>&copy; 2024 Obiwank107 Service Website | Built with ❤️ for the blockchain community</p>
+   </footer>
+
+   <script>
+      function copyToClipboard(text, button) {
+         navigator.clipboard.writeText(text).then(function() {
+            // Change button text temporarily
+            const originalText = button.innerHTML;
+            button.innerHTML = '✅ Copied!';
+            button.style.background = '#10b981';
+            
+            // Reset button after 2 seconds
+            setTimeout(function() {
+               button.innerHTML = originalText;
+               button.style.background = '#667eea';
+            }, 2000);
+         }).catch(function(err) {
+            console.error('Failed to copy:', err);
+            button.innerHTML = '❌ Failed';
+            setTimeout(function() {
+               button.innerHTML = '📋 Copy';
+            }, 2000);
+         });
+      }
+   </script>
+</body>
+</html>
